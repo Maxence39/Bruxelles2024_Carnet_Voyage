@@ -20,29 +20,28 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Menu</a>
+                <a class="navbar-brand" href="/">Menu</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">Qui sommes nous ?</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Compte rendu</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about">Qui sommes nous ?</a></li>
+                        <!--<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/post">Compte rendu</a></li>-->
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('{% static '/assets/img/angele.jpg' %}')">
+        <header class="masthead" style="background-image: url('{% static '/assets/img/GPbruxelles.jpg' %}')">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
                             <h1>Bruxelles</h1>
-                            <span class="subheading">JE T'AIME </span>
+                            <span class="subheading"> </span>
                         </div>
                     </div>
                 </div>
@@ -55,7 +54,7 @@
                     {% for article in articles %}
                         <!-- Post preview-->
                             <div class="post-preview">
-                                <a href="post/{{article.id}}"><h2 class="post-title">Jour n°2</h2>
+                                <a href="post/{{article.id}}"><h2 class="post-title">{{ article.headline }}</h2>
                                 <h3 class="post-subtitle">{{ article.title }}</h3>
                                 </a>
                                     <p class="post-meta">
@@ -70,57 +69,12 @@
 
                     {% endfor %}
                     <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Jour n°1</h2>
-                            <h3 class="post-subtitle">Le voyage et l'arrivée</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posté par
-                            <a href="#!">Maxence - Raphaël - Quentin</a>
-                            en Mai 2024
-                        </p>
+
                     </div>
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html"><h2 class="post-title">Jour n°2</h2>
-                        <h3 class="post-subtitle">La visite du Parlement</h3>
-                    </a>
-                        <p class="post-meta">
-                            Posté par 
-                            <a href="#!">Maxence - Raphaël - Quentin</a>
-                            en Mai 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Jour n°3</h2>
-                            <h3 class="post-subtitle">Le départ et l'arrivée à Paris.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Poster par
-                            <a href="#!">Maxence - Raphaël - Quentin</a>
-                            en Mai 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Conclusion</h2>
-                            <h3 class="post-subtitle">Ce que nous en avons pensé.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posté par
-                            <a href="#!">Maxence - Raphaël - Quentin</a>
-                            en Mai 2024
-                        </p>
+                  
                     </div>
                     <!-- Divider-->
                     <hr class="my-4" />
@@ -136,7 +90,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://twitter.com/ENSEA1%3Fref_src%3Dtwsrc%255Egoogle%257Ctwcamp%255Eserp%257Ctwgr%255Eauthor&ved=2ahUKEwjSufmsqI-GAxUfTaQEHT0BDGcQ6F56BAgQEAE&usg=AOvVaw0huT0OUO7M5kPNxgHVM6uB">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -148,14 +102,6 @@
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
                                     </span>
                                 </a>
                             </li>

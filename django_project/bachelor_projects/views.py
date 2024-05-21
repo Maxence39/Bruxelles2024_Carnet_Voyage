@@ -17,6 +17,7 @@ def post(request):
 
 def post(request, id_post):
     article = Article.objects.get(pk=id_post)
+    print(article.image)
     return render(request, 'post.html', {'article' : article})
 
 def contact(request):

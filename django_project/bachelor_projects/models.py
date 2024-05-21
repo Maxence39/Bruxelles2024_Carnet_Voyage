@@ -4,9 +4,11 @@ from django.utils import timezone
 
 class Article(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    headline = models.CharField(max_length=30, default="")
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to='images/', default="NULL")
 
 #class Project(models.Model):
 #    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
